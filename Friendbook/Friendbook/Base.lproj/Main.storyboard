@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tlW-bL-gM8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Friend List View Controller-->
+        <scene sceneID="hsc-vJ-2H7">
+            <objects>
+                <viewController id="pon-Yf-Fh4" customClass="FriendListViewController" customModule="Friendbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AvD-Ba-O8c"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cqe-iZ-GNv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v3f-2j-fu4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yYQ-kg-Des">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yYQ-kg-Des" secondAttribute="trailing" id="G8L-gi-25m"/>
+                            <constraint firstItem="yYQ-kg-Des" firstAttribute="leading" secondItem="v3f-2j-fu4" secondAttribute="leading" id="Mbe-Is-gYP"/>
+                            <constraint firstItem="yYQ-kg-Des" firstAttribute="top" secondItem="v3f-2j-fu4" secondAttribute="top" id="Rii-fB-Gte"/>
+                            <constraint firstItem="Cqe-iZ-GNv" firstAttribute="top" secondItem="yYQ-kg-Des" secondAttribute="bottom" id="zCz-2O-03J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RvN-Ye-8ZB"/>
+                    <connections>
+                        <outlet property="tableView" destination="yYQ-kg-Des" id="M6y-Rd-W5S"/>
+                        <segue destination="LXV-XD-5gi" kind="show" identifier="friendListToFriendDetail" id="vBs-f3-aEH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="248-Br-d8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="153"/>
+        </scene>
+        <!--Friend View Controller-->
+        <scene sceneID="7iI-4p-XQX">
+            <objects>
+                <viewController id="LXV-XD-5gi" customClass="FriendViewController" customModule="Friendbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wqK-g6-Z5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="0xE-Fm-yv7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XW3-1G-rVp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZb-en-OVJ">
+                                <rect key="frame" x="270" y="198" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-Rk-7pA">
+                                <rect key="frame" x="270" y="89" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eZb-en-OVJ" firstAttribute="top" secondItem="zcb-Rk-7pA" secondAttribute="bottom" constant="79" id="43f-cR-xvB"/>
+                            <constraint firstItem="zcb-Rk-7pA" firstAttribute="top" secondItem="wqK-g6-Z5E" secondAttribute="bottom" constant="25" id="A74-2H-Mh1"/>
+                            <constraint firstItem="zcb-Rk-7pA" firstAttribute="centerX" secondItem="XW3-1G-rVp" secondAttribute="centerX" id="uLw-zh-D0p"/>
+                            <constraint firstItem="eZb-en-OVJ" firstAttribute="centerX" secondItem="XW3-1G-rVp" secondAttribute="centerX" id="y8e-Gf-GW8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="eZb-en-OVJ" id="bPb-a2-31m"/>
+                        <outlet property="nameLabel" destination="zcb-Rk-7pA" id="Wig-Tj-XEI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zml-K8-Wg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="167"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0zg-4K-Q3I">
+            <objects>
+                <navigationController id="tlW-bL-gM8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BVo-aJ-FlY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pon-Yf-Fh4" kind="relationship" relationship="rootViewController" id="xSN-EF-Qfs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQO-6e-Ls8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="372"/>
+        </scene>
+    </scenes>
+</document>
